@@ -1,6 +1,11 @@
 <?php 
 /* Template Name: Projects Page Template*/
     get_header();
+    query_posts(array(
+        'post_type' => 'Projects'
+     ));
+
+
 ?>
 
 <section class="ftco-section ftco-no-pb">
@@ -27,115 +32,43 @@
 			</div>
 		</div>
 		<div class="container-wrap">
-			<div class="row no-gutters">
-				<div class="col-md-6 col-lg-3 ftco-animate">
+			<div class="row no-gutters justify-content-center">
+            <?php
+                while (have_posts()) : the_post(); ?>
+                    <div class="col-md-offset-6 col-md-6 col-lg-offset-3 col-lg-3 ftco-animate">
+                        <div class="project">
+                            <img src="<?php the_field('image');?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <div class="text">
+                                <span><?php the_title(); ?></span>
+                                <h3><a href="<?php the_permalink() ?>"><?php the_excerpt(); ?></a></h3>
+                            </div>
+                            <a href="<?php the_field('image'); ?>"
+                                class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endwhile; 
+            ?>
+			</div>
+		</div>
+	</section>
+
+
+
+    <!-- <div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
+						<img src="/images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
 						<div class="text">
 							<span>Interior Design</span>
 							<h3><a href="project.html">Office Interior Design</a></h3>
 						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-1.jpg"
+						<a href="</images/work-1.jpg"
 							class="icon image-popup d-flex justify-content-center align-items-center">
 							<span class="icon-expand"></span>
 						</a>
 					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-2.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-3.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-4.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-5.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Landscape Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-5.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-6.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Exterior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-6.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-7.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Exterior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-7.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-8.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-8.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-    
+				</div> -->
 <?php
     get_footer();
 ?>

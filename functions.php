@@ -97,3 +97,57 @@ function mosaic_style(){
 
 }
 add_action( 'wp_enqueue_scripts', 'mosaic_style' );
+
+
+/*
+---------  Custom Project Post Type --------
+*/
+    
+// function create_post_type() {
+//     register_post_type( 'mosaic_projects',
+//       array(
+//         'labels' => array(
+//           'name' => __( 'Projects' ),
+//           'singular_name' => __( 'Projects' )
+//         ),
+//         'public' => true,
+//         'has_archive' => false,
+//         'supports' =>  array('slug' => 'Projects')
+//       )
+//     );
+      
+// }
+// add_action( 'init', 'create_post_type' );
+
+function cw_post_type_projects() {
+
+    $supports = array(
+        'title', // post title
+        'thumbnail', // featured images
+        'excerpt', // post excerpt
+        );
+    $labels = array(
+        'name' => _x('Projects', 'plural'),
+        'singular_name' => _x('Projects', 'singular'),
+        'menu_name' => _x('Projects', 'admin menu'),
+        'name_admin_bar' => _x('Projects', 'admin bar'),
+        'add_new' => _x('Add New', 'add new'),
+        'add_new_item' => __('Add New Project'),
+        'new_item' => __('New Project'),
+        'edit_item' => __('Edit Project'),
+        'view_item' => __('View Project'),
+        'all_items' => __('All Project'),
+        'not_found' => __('No projects found.'),
+    );
+    $args = array(
+            'supports' => $supports,
+            'labels' => $labels,
+            'public' => true,
+            'query_var' => true,
+            'rewrite' => array('slug' => 'Projects'),
+            'has_archive' => false,
+            'hierarchical' => false,
+    );
+    register_post_type('Projects', $args);
+}
+add_action('init', 'cw_post_type_projects');

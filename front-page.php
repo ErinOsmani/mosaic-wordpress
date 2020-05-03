@@ -1,14 +1,14 @@
 <?php
 /* front page template file */
-
-
-get_header();
-
+	get_header();
+	query_posts(array(
+		'post_type' => 'Projects'
+	 ));
 ?>
 
 
 
-<section class="home-slider js-fullheight owl-carousel bg-white">
+	<section class="home-slider js-fullheight owl-carousel bg-white">
 		<div class="slider-item js-fullheight">
 			<div class="overlay"></div>
 			<div class="container">
@@ -56,37 +56,6 @@ get_header();
 		</div>
 	</section>
 
-	<section class="ftco-section ftc-no-pb">
-		<div class="container">
-			<div class="row no-gutters">
-				<div class="col-md-5 p-md-5 img img-2" style="background-image: url(<?php bloginfo('template_url') ?>/images/bg_3.jpg);">
-				</div>
-				<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
-					<div class="heading-section mb-5 pl-md-5">
-						<div class="pl-md-5 ml-md-5">
-							<span class="subheading subheading-with-line"><small
-									class="pr-2 bg-white">About</small></span>
-							<h2 class="mb-4">We are the best Interior, Exterior &amp; Architecture Firm</h2>
-						</div>
-					</div>
-					<div class="pl-md-5 ml-md-5 mb-5">
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-							would have been rewritten a thousand times and everything that was left from its origin
-							would be the word "and" and the Little Blind Text should turn around and return to its own,
-							safe country. But nothing the copy said could convince her and so it didn’t take long until
-							a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged
-							her into their agency, where they abused her for their.</p>
-						<p>When she reached the first hills of the Italic Mountains, she had a last view back on the
-							skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of
-							her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she
-							continued her way.</p>
-						<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 
 
 
@@ -115,111 +84,24 @@ get_header();
 			</div>
 		</div>
 		<div class="container-wrap">
-			<div class="row no-gutters">
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3><a href="project.html">Office Interior Design</a></h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-1.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-2.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-3.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-4.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-5.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Landscape Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-5.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-6.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Exterior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-6.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-7.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Exterior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-7.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<img src="<?php bloginfo('template_url') ?>/images/work-8.jpg" class="img-fluid" alt="Colorlib Template">
-						<div class="text">
-							<span>Interior Design</span>
-							<h3>Office Interior Design</h3>
-						</div>
-						<a href="<?php bloginfo('template_url') ?>/images/work-8.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
-					</div>
-				</div>
+			<div class="row no-gutters justify-content-center">
+            <?php
+                while (have_posts()) : the_post(); ?>
+                    <div class="col-md-offset-6 col-md-6 col-lg-offset-3 col-lg-3 ftco-animate">
+                        <div class="project">
+                            <img src="<?php the_field('image');?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <div class="text">
+                                <span><?php the_title(); ?></span>
+                                <h3><a href="<?php the_permalink() ?>"><?php the_excerpt(); ?></a></h3>
+                            </div>
+                            <a href="<?php the_field('image'); ?>"
+                                class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endwhile; 
+            ?>
 			</div>
 		</div>
 	</section>
