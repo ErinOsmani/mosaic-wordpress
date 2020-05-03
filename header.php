@@ -45,6 +45,7 @@
 
                 <?php 
                     wp_nav_menu( $arg = array(
+						'container' => false,
                         'menu_class' => 'navbar-nav ml-auto',
                         'theme_location' => 'primary'
                     ));
